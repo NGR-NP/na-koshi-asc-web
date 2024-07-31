@@ -8,15 +8,28 @@ interface ActivePathnameHighliterProps {
   children: React.ReactNode;
   href: string;
   className?: string;
+  activeStyle?: string;
 }
 export default function ActivePathnameHighliter({
   children,
   href,
   className,
+  activeStyle,
 }: ActivePathnameHighliterProps) {
   const pathname = usePathname();
-  const active = pathname === href && 'text-primary';
-  return <div className={cn(active, className)}>{children}</div>;
+  const active = pathname === href;
+  return (
+    <div
+      className={cn(
+        active && `text-primary isActive ${activeStyle}`,
+        className,
+        'group',
+      )}
+      data-active={active}
+    >
+      {children}
+    </div>
+  );
 }
 
 export function ActivePathnameHomeNavHighliter({
