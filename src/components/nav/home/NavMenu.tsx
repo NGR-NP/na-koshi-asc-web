@@ -33,11 +33,9 @@ export function NavMenu() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <ActivePathnameHomeNavHighliter href={ABOUT.default}>
-            <Link href={ABOUT.default} legacyBehavior passHref>
-              <NavigationMenuTrigger className="bg-transparent">
-                About
-              </NavigationMenuTrigger>
-            </Link>
+            <NavigationMenuTrigger className="bg-transparent">
+              About
+            </NavigationMenuTrigger>
           </ActivePathnameHomeNavHighliter>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -45,7 +43,7 @@ export function NavMenu() {
                 <ActivePathnameNavItemHighliter href={ABOUT.default}>
                   <Link
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md "
-                    href="/"
+                    href={ABOUT.default}
                   >
                     <Image
                       src={NAKoshiLOGO}
@@ -62,7 +60,7 @@ export function NavMenu() {
                       alt="NA koshi area service committee logo"
                     />
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      NA Koshi ASC
+                      About NA Koshi ASC
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -101,11 +99,9 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={METTING.default} legacyBehavior passHref>
-            <NavigationMenuTrigger className="bg-transparent">
-              Metting
-            </NavigationMenuTrigger>
-          </Link>
+          <NavigationMenuTrigger className="bg-transparent">
+            Metting
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
