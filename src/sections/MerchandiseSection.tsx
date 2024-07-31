@@ -1,5 +1,3 @@
-import { CarouselItem } from '@/components/ui/carousel';
-import MerchandiseCard from '@/components/card/merch/merchandiseCard';
 import MerchCarousel from '@/components/card/merch/MerchCarousel';
 export default function MerchandiseSection() {
   return <MerchCarousel merchs={Merchs} />;
