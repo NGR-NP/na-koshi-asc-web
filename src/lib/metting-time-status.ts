@@ -16,7 +16,7 @@ function parseDateTime(date: string, time: string) {
   return parse(`${date} ${time}`, MEETING_TIME_FORMAT, new Date());
 }
 
-export function checkMeetingStatus(meeting: any) {
+export function checkMeetingStatus(meeting: MettingListType) {
   const now = new Date();
   const today = now.toLocaleString('en-US', { timeZone: 'Asia/Kathmandu' });
 
