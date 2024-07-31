@@ -12,7 +12,7 @@ export const MettingCard = ({ item }: { item: MettingListType }) => {
     <Card className="max-w-[400px] cursor-pointer rounded-lg shadow-md hover:shadow-lg  text-card-foreground bg-card h-auto overflow-hidden">
       <CardContent className="divide-y-2 p-0">
         <div className="pb-3 max-sm:flex-col px-4 pt-5 z-10 w-full justify-start shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large flex gap-3 items-start">
-          <div className="flex justify-between max-sm:w-full">
+          <div className="flex justify-between gap-4 max-sm:w-full">
             <Image
               alt={`${item.name} logo`}
               height={50}
@@ -21,7 +21,7 @@ export const MettingCard = ({ item }: { item: MettingListType }) => {
               src={item?.img || NaKoshiLogo}
             />
 
-            <p className="sm:hidden bg-accent text-accent-foreground h-fit px-2 py-1 text-sm">
+            <p className="sm:hidden bg-accent line-clamp-2 text-accent-foreground h-fit px-2 py-1 text-sm">
               {status.message}
             </p>
           </div>
